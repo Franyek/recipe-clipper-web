@@ -23,42 +23,82 @@
     <div class="wrap">
       <article class="doc">
         <h1>Privacy Policy</h1>
-        <div class="effective-date">Effective Date: September 30, 2026</div>
+        <p class="updated">Effective Date: September 30, 2026</p>
 
-    <p><strong>[Company/Developer Name]</strong> ("we," "us," or "our") respects your privacy. This Privacy Policy explains how <strong>[App Name]</strong> ("the App") handles your data and web content.</p>
+        <p><strong>Franciska Sara</strong> ("we," "us," or "our") respects your privacy. This Privacy Policy explains what data <strong>Tine</strong> ("the App") collects, why, how long we keep it, and the rights you have. We are the data controller for the personal data described below.</p>
 
-    <div class="highlight-card">
-        <strong>Privacy Summary:</strong> We built this App with a strict privacy-by-design architecture. Your extracted recipes remain on your device, and our servers never retain or log your processed content.
-    </div>
+        <div class="highlight-card">
+          <strong>Privacy Summary:</strong> Your recipes, meal plans, and grocery lists stay on your device. Our servers only store what is needed to run your account, enforce usage limits, and manage your subscription. Page text sent for AI extraction is processed and not stored in any database.
+        </div>
 
-    <h2>1. Zero Central Storage Architecture</h2>
-    <p>Your privacy is built directly into our application architecture:</p>
-    <ul>
-        <li><strong>Local Device Storage:</strong> All extracted recipes, ingredient lists, instructions, custom notes, and images are stored exclusively on your individual device.</li>
-        <li><strong>No Cloud Backups of Recipes:</strong> We do not host a central recipe database, nor do we store, retain, or save third-party recipe content or URLs on our backend servers.</li>
-    </ul>
+        <h2>1. Data Stored Only on Your Device</h2>
+        <p>The following data is stored exclusively on your device and is never uploaded to our servers:</p>
+        <ul>
+          <li>Extracted and manually added recipes (titles, ingredients, steps, source links)</li>
+          <li>Recipe images, including photos you pick from your library</li>
+          <li>Meal plans and grocery lists</li>
+        </ul>
+        <p>We do not host a recipe database and do not back up this data. If you delete the App, this data is deleted with it.</p>
 
-    <h2>2. Data Processing & Transmissions</h2>
-    <ul>
-        <li><strong>Client-Side Parsing:</strong> Whenever possible, web content (such as Schema.org JSON-LD metadata) is fetched and processed entirely locally on your mobile device without touching our servers.</li>
-        <li><strong>Transient Server-Assisted Extraction:</strong> When a webpage requires server-assisted AI parsing, cleaned, non-identifiable text from the requested page is securely transmitted to our backend server. This data is processed <strong>transiently in memory solely to extract the recipe facts</strong> and is returned immediately to your device. Our servers <strong>do not retain, store, log, or share</strong> the submitted text or source URLs once the request is complete.</li>
-    </ul>
+        <h2>2. Data We Store on Our Servers</h2>
+        <ul>
+          <li><strong>Account data:</strong> a unique identifier from Sign in with Apple, and your name and email address only if you choose to share them with Apple’s sign-in prompt (Apple may provide a private relay email instead of your real address). We also store an access token that the App uses to authenticate requests.</li>
+          <li><strong>Usage data:</strong> the date and time of each recipe extraction ("clip"), used to enforce the monthly limits of your plan. No URLs or recipe content are stored with it.</li>
+          <li><strong>Subscription data:</strong> the transaction identifier, product, purchase period, and expiry date that Apple provides when you subscribe, used to grant Pro access. We never receive your payment card details.</li>
+          <li><strong>Technical logs:</strong> our servers keep short-lived technical logs (for example, IP addresses, request times, and error messages) to operate the service, prevent abuse, and fix problems. IP addresses are also used for rate limiting.</li>
+        </ul>
 
-    <h2>3. Personal Data & Accounts</h2>
-    <p>We believe in minimal data collection:</p>
-    <ul>
-        <li><strong>Account-Free Use:</strong> The App does not require user registration or account creation to function.</li>
-        <li><strong>In-App Purchases:</strong> Transaction processing for Pro subscriptions is handled directly through the Apple App Store or Google Play Store. We receive only basic transaction verification tokens without receiving or storing sensitive credit card details.</li>
-    </ul>
+        <h2>3. How Recipe Extraction Works</h2>
+        <ul>
+          <li><strong>Web pages:</strong> when you clip a web page, the page is downloaded and its recipe is extracted from structured data published by the website (such as Schema.org recipe data) or, when that is not available, from the page text using AI.</li>
+          <li><strong>YouTube videos:</strong> when you clip a YouTube video, its publicly available transcript is retrieved from YouTube and used for AI extraction.</li>
+          <li><strong>AI processing:</strong> for AI extraction, the page text or transcript and its source URL are sent to our server and from there to Anthropic’s Claude API, which returns the structured recipe to your device. We do not store this content in any database; the source URL may appear in our technical logs when an error occurs.</li>
+          <li><strong>Images:</strong> recipe images are loaded directly from the original website, which means that website can see your device’s IP address, as with any normal visit.</li>
+        </ul>
 
-    <h2>4. Third-Party Links</h2>
-    <p>Extracted recipes contain direct links back to the original publisher websites. Tapping these links opens the original webpage in a web view or browser, governed by the privacy policy of that third-party website.</p>
+        <h2>4. Why We Process Your Data (Legal Bases)</h2>
+        <ul>
+          <li><strong>To provide the App</strong> (account, recipe extraction, usage limits, Pro subscription): necessary to perform our contract with you (Art. 6(1)(b) GDPR).</li>
+          <li><strong>To keep the service secure</strong> (technical logs, rate limiting, abuse prevention, error fixing): our legitimate interest in operating a secure and reliable service (Art. 6(1)(f) GDPR).</li>
+          <li><strong>To meet legal obligations</strong>, where applicable (Art. 6(1)(c) GDPR).</li>
+        </ul>
+        <p>We do not sell your personal data, and we do not use it for advertising or profiling.</p>
 
-    <h2>5. Changes to This Policy</h2>
-    <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+        <h2>5. Service Providers</h2>
+        <p>We share data only with the providers we need to run the App:</p>
+        <ul>
+          <li><strong>Apple</strong> — Sign in with Apple, App Store billing, and subscription verification (<a href="https://www.apple.com/legal/privacy/">Apple Privacy Policy</a>).</li>
+          <li><strong>Anthropic</strong> — AI-assisted recipe extraction via the Claude API. Anthropic processes the submitted text to return the result and does not use it to train its models under its commercial terms (<a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a>).</li>
+          <li><strong>Railway</strong> — hosting of our backend servers and database (<a href="https://railway.com/legal/privacy">Railway Privacy Policy</a>).</li>
+          <li><strong>YouTube (Google)</strong> — source of video transcripts when you clip a YouTube video (<a href="https://policies.google.com/privacy">Google Privacy Policy</a>).</li>
+        </ul>
 
-    <h2>6. Contact Us</h2>
-    <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:[Your Support Email]">[Your Support Email]</a>.</p>
+        <h2>6. International Transfers</h2>
+        <p>Some of our providers, including Anthropic and Railway, are based in the United States, so your data may be processed outside the European Economic Area. Where this happens, we rely on appropriate safeguards, such as the EU–U.S. Data Privacy Framework or the European Commission’s Standard Contractual Clauses.</p>
+
+        <h2>7. How Long We Keep Data</h2>
+        <ul>
+          <li><strong>Account data and subscription data:</strong> for as long as your account exists. When you delete your account, we delete it within 30 days.</li>
+          <li><strong>Clip timestamps:</strong> 60 days, then automatically deleted.</li>
+          <li><strong>Technical logs:</strong> up to 30 days.</li>
+          <li><strong>Content sent for AI extraction:</strong> not stored in our database. Anthropic may retain it for a limited period under its own policy.</li>
+        </ul>
+
+        <h2>8. Your Rights</h2>
+        <p>Under the GDPR you have the right to access your personal data, correct it, delete it, restrict or object to its processing, and receive it in a portable format. To exercise any of these rights, including deleting your account, contact us at the email address below. We will respond within one month.</p>
+        <p>You also have the right to lodge a complaint with a data protection authority, in particular in the EU country where you live. In Hungary, this is the <a href="https://naih.hu">Nemzeti Adatvédelmi és Információszabadság Hatóság (NAIH)</a>.</p>
+
+        <h2>9. Children</h2>
+        <p>The App is not intended for anyone under 16 years of age, and we do not knowingly collect personal data from children under 16. If you believe a child has provided us with personal data, contact us and we will delete it.</p>
+
+        <h2>10. Third-Party Links</h2>
+        <p>Extracted recipes contain links back to the original publisher websites. Opening these links takes you to the third-party website, which is governed by its own privacy policy.</p>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of material changes in the App or on our <a href="support.html">support page</a> before they take effect, and the effective date at the top of this page will be updated.</p>
+
+        <h2>12. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy or want to exercise your rights, contact us at <a href="mailto:tine+franyek@gmail.com">tine+franyek@gmail.com</a> or via our <a href="support.html">support page</a>.</p>
       </article>
     </div>
   </main>

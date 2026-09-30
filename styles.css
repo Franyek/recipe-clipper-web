@@ -277,6 +277,30 @@ article.doc ul {
   padding-left: 20px;
 }
 
+article.doc .highlight-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 12px 0 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: var(--card-shadow);
+}
+
+article.doc .disclaimer-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 12px 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  box-shadow: var(--card-shadow);
+}
+
 .faq-item {
   border-bottom: 1px solid var(--border);
   padding: 20px 0;
